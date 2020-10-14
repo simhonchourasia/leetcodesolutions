@@ -1,0 +1,22 @@
+// https://leetcode.com/problems/subarray-sum-equals-k/
+
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        int N = nums.length;
+        int[] psa = new int[N+1];
+        psa[0] = 0;
+        for (int i = 1; i <= N; i++){
+            psa[i] = psa[i-1]+nums[i-1];
+        }
+        
+        int ret = 0;
+        for (int i = 0; i < N; i++){
+            for (int j = i+1; j <= N; j++){
+                if (psa[j]-psa[i]==k){
+                    ret ++;
+                }
+            }
+        }
+        return ret;
+    }
+}
