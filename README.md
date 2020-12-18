@@ -1,2 +1,2 @@
 # leetcodesolutions
-Leetcode solutions with explanations
+Leetcode solutions. Some have explanations about runtime and memory. 
